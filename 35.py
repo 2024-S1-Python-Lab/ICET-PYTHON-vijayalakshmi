@@ -12,8 +12,9 @@ class Bank:
             print ("Invalid deposit amount.Please enter a positive value")
     def withdraw(self,amount):
         if amount>0:
-            if amount<=self.bal:
-                print(f"Withdrawal successfull!New balance:{self.bal}")
+            if amount<= self.bal:
+                self.bal-=amount
+                print(f"Withdrawal successfull! New balance:{self.bal}")
             else:
                 print("Insufficient balance")
         else:
